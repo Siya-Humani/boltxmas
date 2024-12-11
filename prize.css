@@ -1,0 +1,38 @@
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Use Inter as the primary font */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #00b47f;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 5px; /* Reduce the space between h2 and .congrats */
+}
+
+.congrats {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 0;
+}
+
+.form-image {
+    width: 300px;
+    height: 300px;
+}
+
+p {
+    color: white;
+    margin-top: 20px; /* Optional: add a little space between the paragraph and the rest */
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <link rel="stylesheet" href="instructions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="snow-images">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image-2">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image-3">
+        <img src="./Asset 9.png" alt="Snow" class="snow-image-4">
+    </div>
+    <div class="how-to-play-container">
+      <img src="./Asset2.png" alt="How To" class="how-image">
+        <p class="instructions">CLICK ON <b>"SPIN"</b> ON THE NEXT PAGE TO SPIN THE WHEEL & WIN!</p>
+        <p class="prompt">LET'S PLAY</p>
+        <!-- Display user information -->
+        <div class="user-info">
+            <p id="user-data"></p>
+        </div>
+
+        <!-- Button to proceed to spin page -->
+        <a href="wheel.html" class="play-button">PLAY</a>
+    </div>
+
+    <script>
+        // Function to get query parameters (name, phone, email)
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name') || 'Guest';
+            const phone = params.get('phone') || 'N/A';
+            const email = params.get('email') || 'N/A';
+            return { name, phone, email };
+        }
+    </script>
+</body>
+</html>
+
+

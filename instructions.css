@@ -1,0 +1,106 @@
+/* General page styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif; /* Use Inter as the primary font */
+    background-color: #00b47f;
+    color: white;
+    text-align: center;
+}
+
+.how-to-play-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.how-image {
+    width: 560px; /* Make the image responsive */
+    height: 80px;
+    max-width: 260px; /* Limit the image width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.headline {
+    font-size: 30px;
+    position: relative;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+
+
+.prompt {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 15%;
+}
+/* Snow Image 1 - Top Left (existing one) */
+.snow-image {
+    position: absolute; /* Absolute positioning */
+    top: 30px; /* Distance from the top */
+    left: 30px; /* Distance from the left */
+    height: 80px; /* Snow image size */
+    width: 80px;
+  }
+  
+  /* Snow Image 2 - Top Right */
+  .snow-image-2 {
+    position: absolute;
+    top: 210px; /* Adjust top position */
+    right: 70px; /* Distance from the right */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 3 - Bottom Left */
+  .snow-image-3 {
+    position: absolute;
+    bottom: 100px; /* Distance from the bottom */
+    left: 30px; /* Distance from the left */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 4 - Bottom Right */
+  .snow-image-4 {
+    position: absolute;
+    bottom: 40px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    height: 80px;
+    width: 80px;
+  }
+/* Text instructions */
+.instructions {
+    font-size: 28px;
+    color: white;
+    text-transform: uppercase;
+    width: 255px;
+    height: 50px;
+    margin-top: 0;
+}
+
+/* Button styling */
+.play-button {
+    background-color: #057252; /* Green background */
+    color: white;
+    padding: 20px 50px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top:5%;
+}
+
+.play-button:hover {
+    background-color: #057252; /* Darker green on hover */
+}
+
