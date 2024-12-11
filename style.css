@@ -8,7 +8,38 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh; /* Ensure body covers full viewport height */
+  max-height: 100vh; /* Ensure body covers full viewport height */
+}
+
+#userForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* Reduced gap between form elements */
+}
+
+#userForm input {
+  width: 100%;
+  padding: 6px; /* Reduced padding for smaller form elements */
+  margin: 2px 0; /* Reduced margin between form elements */
+  box-sizing: border-box;
+}
+
+button {
+  width: 40%;
+  padding: 12px;
+  background-color: #006f4e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+}
+
+#userForm button {
+  cursor: pointer;
 }
 
 /* Snow Image 1 - Top Left (existing one) */
@@ -47,7 +78,6 @@ body {
   width: 80px;
 }
 
-
 .container {
   width: 100%;
   max-width: 400px;
@@ -58,25 +88,34 @@ body {
 
 
 .form-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  margin-top: 250px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 0;  /* Remove bottom padding to reduce space */
+  position: relative; /* Set as relative to position .snow-image inside */
+}
+
+.bottom-image {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
   position: relative; /* Set as relative to position .snow-image inside */
 }
 
 .form-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
-  margin-top: 5px; /* Reduce space between the image and the paragraph */
-  padding: 0;
+  padding-top: 0; /* Reduce space between the image and the paragraph */
 }
 
 .go {
@@ -87,7 +126,7 @@ p {
 form {
   background: #00b47f;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
@@ -102,19 +141,6 @@ input[type="tel"] {
   outline: none;
   border: none;
   border-bottom: 1px solid #ffffff;
-}
-
-button {
-  width: 50%;
-  padding: 12px;
-  background-color: #006f4e;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 5px;
 }
 
 button:hover {
@@ -176,6 +202,6 @@ button:hover {
   }
 
   button {
-    width: auto; /* Button width for large screens */
+    width: 40%; /* Button width for large screens */
   }
 }
