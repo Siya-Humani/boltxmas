@@ -45,35 +45,35 @@ button {
 /* Snow Image 1 - Top Left (existing one) */
 .snow-image {
   position: absolute; /* Absolute positioning */
-  top: 30px; /* Distance from the top */
+  top: 40px; /* Distance from the top */
   left: 30px; /* Distance from the left */
-  height: 80px; /* Snow image size */
-  width: 80px;
+  height: 50px; /* Snow image size */
+  width: 50px;
 }
 
 /* Snow Image 2 - Top Right */
 .snow-image-2 {
   position: absolute;
-  top: 210px; /* Adjust top position */
-  right: 70px; /* Distance from the right */
-  height: 60px;
-  width: 60px;
+  top: 195px; /* Adjust top position */
+  right: 50px; /* Distance from the right */
+  height: 50px;
+  width: 50px;
 }
 
 /* Snow Image 3 - Bottom Left */
 .snow-image-3 {
   position: absolute;
   bottom: 100px; /* Distance from the bottom */
-  left: 30px; /* Distance from the left */
-  height: 60px;
-  width: 60px;
+  left: 20px; /* Distance from the left */
+  height: 50px;
+  width: 50px;
 }
 
 /* Snow Image 4 - Bottom Right */
 .snow-image-4 {
   position: absolute;
-  bottom: 40px; /* Distance from the bottom */
-  right: 30px; /* Distance from the right */
+  bottom: 60px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
   height: 80px;
   width: 80px;
 }
