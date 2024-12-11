@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-height: 100vh; /* Ensure body covers full viewport height */
+  min-height: 100vh; /* Ensure body covers full viewport height */
 }
 
 #userForm {
@@ -54,7 +54,7 @@ button {
 /* Snow Image 2 - Top Right */
 .snow-image-2 {
   position: absolute;
-  top: 195px; /* Adjust top position */
+  top: 165px; /* Adjust top position */
   right: 50px; /* Distance from the right */
   height: 50px;
   width: 50px;
@@ -73,7 +73,7 @@ button {
 .snow-image-4 {
   position: absolute;
   bottom: -60px; /* Distance from the bottom */
-  right: 40px; /* Distance from the right */
+  right: 30px; /* Distance from the right */
   height: 70px;
   width: 70px;
 }
@@ -88,18 +88,19 @@ button {
 
 
 .form-image {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   display: inline-block;
   margin-top: 100px;
+  margin-bottom: -150px
   margin-left: auto;
   margin-right: auto;
   position: relative; /* Set as relative to position .snow-image inside */
 }
 
 .bottom-image {
-  width: 75%;
-  height: 75%;
+  width: 80%;
+  height: 80%;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
