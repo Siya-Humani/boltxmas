@@ -45,7 +45,7 @@ button {
 /* Snow Image 1 - Top Left (existing one) */
 .snow-image {
   position: absolute; /* Absolute positioning */
-  top: 15px; /* Distance from the top */
+  top: -20px; /* Distance from the top */
   left: 50px; /* Distance from the left */
   height: 50px; /* Snow image size */
   width: 50px;
