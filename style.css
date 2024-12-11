@@ -45,8 +45,8 @@ button {
 /* Snow Image 1 - Top Left (existing one) */
 .snow-image {
   position: absolute; /* Absolute positioning */
-  top: 40px; /* Distance from the top */
-  left: 30px; /* Distance from the left */
+  top: 15px; /* Distance from the top */
+  left: 50px; /* Distance from the left */
   height: 50px; /* Snow image size */
   width: 50px;
 }
@@ -72,10 +72,10 @@ button {
 /* Snow Image 4 - Bottom Right */
 .snow-image-4 {
   position: absolute;
-  bottom: -40px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
-  height: 50px;
-  width: 50px;
+  bottom: -60px; /* Distance from the bottom */
+  right: 40px; /* Distance from the right */
+  height: 70px;
+  width: 70px;
 }
 
 .container {
@@ -88,10 +88,10 @@ button {
 
 
 .form-image {
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   display: inline-block;
-  margin-top: 250px;
+  margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
   position: relative; /* Set as relative to position .snow-image inside */
