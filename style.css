@@ -88,14 +88,15 @@ button {
 
 
 .form-image {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   display: inline-block;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   position: relative; /* Set as relative to position .snow-image inside */
 }
+
 
 .bottom-image {
   width: 80%;
