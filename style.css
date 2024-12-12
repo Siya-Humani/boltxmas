@@ -1,6 +1,6 @@
 /* Base styles for mobile-first design */
 body {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #00b47f;
@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh; /* Ensure body covers full viewport height */
+  max-height: 100vh; /* Ensure body covers full viewport height */
 }
 
 #userForm {
@@ -19,10 +19,30 @@ body {
 }
 
 #userForm input {
-  width: 100%;
+  width: 80%;
   padding: 6px; /* Reduced padding for smaller form elements */
   margin: 2px 0; /* Reduced margin between form elements */
   box-sizing: border-box;
+}
+
+.terms-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.terms-container p {
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+}
+
+.terms-container a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.terms-container a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -35,7 +55,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 #userForm button {
@@ -45,42 +65,42 @@ button {
 /* Snow Image 1 - Top Left (existing one) */
 .snow-image {
   position: absolute; /* Absolute positioning */
-  top: 80px; /* Distance from the top */
-  left: 50px; /* Distance from the left */
-  height: 50px; /* Snow image size */
-  width: 50px;
+  top: 40px; /* Distance from the top */
+  left: 30px; /* Distance from the left */
+  height: 80px; /* Snow image size */
+  width: 80px;
 }
 
 /* Snow Image 2 - Top Right */
 .snow-image-2 {
   position: absolute;
-  top: 165px; /* Adjust top position */
-  right: 50px; /* Distance from the right */
-  height: 50px;
-  width: 50px;
+  top: 80px; /* Adjust top position */
+  right: 30px; /* Distance from the right */
+  height: 60px;
+  width: 60px;
 }
 
 /* Snow Image 3 - Bottom Left */
 .snow-image-3 {
   position: absolute;
-  bottom: -70px; /* Distance from the bottom */
+  bottom: 100px; /* Distance from the bottom */
   left: 30px; /* Distance from the left */
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 /* Snow Image 4 - Bottom Right */
 .snow-image-4 {
   position: absolute;
-  bottom: -85px; /* Distance from the bottom */
+  bottom: 20px; /* Distance from the bottom */
   right: 30px; /* Distance from the right */
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
 }
 
 .container {
-  width: 100%;
-  max-width: 400px;
+  width: 50%;
+  min-width: 600px;
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
@@ -88,45 +108,45 @@ button {
 
 
 .form-image {
-  width: 80%;
-  height: 80%;
+  width: 40%;
+  height: 40%;
   display: block;
-  margin-top: 10px;
   margin-left: auto;
+  padding-top: 50px;
   margin-right: auto;
   position: relative; /* Set as relative to position .snow-image inside */
 }
 
-
 .bottom-image {
-  width: 80%;
-  height: 80%;
-  display: inline-block;
+  width: 250px;
+  height: 150px;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5px;
   position: relative; /* Set as relative to position .snow-image inside */
 }
 
 .form-header {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 300;
   color: #ffffff;
   padding-top: 0; /* Reduce space between the image and the paragraph */
+  font-weight: medium;
 }
 
 .go {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 form {
   background: #00b47f;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -184,12 +204,12 @@ button:hover {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 800px; /* Expand container width for larger screens */
+    max-width: 200px; /* Expand container width for larger screens */
   }
 
   h1 {
-    font-size: 32px; /* Larger h1 for desktop */
-    padding: 0 40px; /* Add padding */
+    font-size: 28px; /* Larger h1 for desktop */
+    padding: 0 10px; /* Add padding */
     word-wrap: normal; /* Prevent word wrapping on desktop */
   }
 
@@ -198,7 +218,7 @@ button:hover {
   }
 
   .form-image {
-    width: 300px;  /* Increase image size for larger screens */
+    width: 250px;  /* Increase image size for larger screens */
     height: auto;
   }
 
