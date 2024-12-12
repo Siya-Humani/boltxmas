@@ -31,11 +31,6 @@ p {
     margin-top: 20px; /* Optional: add a little space between the paragraph and the rest */
 }
 
-a {
-  color: white;
-  text-decoration: underline;
-}
-
 .try {
     width: 100px;
     height: 100px;
@@ -43,6 +38,19 @@ a {
     position: relative;
     justify-content: center;
     justify-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+  text-decoration: underline; /* Underline on hover */
+
+}
+
+/* Hover effect - Slightly enlarge */
+a:hover {
+  transform: scale(2.2);
 }
 
 /* Snow Image 1 - Top Left (existing one) */
