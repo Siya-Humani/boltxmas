@@ -4,134 +4,128 @@ body {
   background-color: #00b47f;
   color: white;
   text-align: center;
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-}
-
-/* How-to-play container */
-.how-to-play-container {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Full viewport height */
-  padding: 20px; /* Add padding for spacing */
-  box-sizing: border-box; /* Ensure padding is included in total height/width */
+  display: block;
 }
+
 
 /* How-to-play image */
 .how-image {
-  width: 70%; /* Adjust the width for desktop */
-  max-width: 600px; /* Limit max width for large screens */
-  height: auto; /* Maintain aspect ratio */
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  margin-top: 20px; /* Slightly increase top margin */
 }
 
-/* Headline styling */
-.headline {
-  font-size: 36px; /* Larger headline for desktop */
-  position: relative;
-  line-height: 1.2;
-  margin-bottom: 20px;
+.line1, .line2, .line3 {
+  font-size: 28px;
+  display: block; /* Ensure each line takes up a new line */
+  text-align: center;
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove any padding */
+  line-height: 1.5; /* Reduce the line height to bring lines closer together */
 }
 
-/* Prompt styling */
 .prompt {
-  color: #ffffff;
+  font-size: 30px;
   font-weight: bold;
-  font-size: 24px; /* Increase font size */
-  margin-top: 20px;
+  margin-bottom: 0;
 }
 
-/* Snow Image 1 - Top Left */
+p {
+  font-weight: 400;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+/* Snow Image 1 - Top Left (existing one) */
 .snow-image {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  height: 80px;
-  width: 80px;
+  position: absolute; /* Absolute positioning */
+  top: 80px; /* Distance from the top */
+  left: 50px; /* Distance from the left */
+  height: 50px; /* Snow image size */
+  width: 50px;
 }
 
 /* Snow Image 2 - Top Right */
 .snow-image-2 {
   position: absolute;
-  top: 210px;
-  right: 70px;
-  height: 60px;
-  width: 60px;
+  top: 165px; /* Adjust top position */
+  right: 50px; /* Distance from the right */
+  height: 50px;
+  width: 50px;
 }
 
 /* Snow Image 3 - Bottom Left */
 .snow-image-3 {
   position: absolute;
-  bottom: 100px;
-  left: 30px;
-  height: 60px;
-  width: 60px;
+  bottom: -70px; /* Distance from the bottom */
+  left: 30px; /* Distance from the left */
+  height: 50px;
+  width: 50px;
 }
 
 /* Snow Image 4 - Bottom Right */
 .snow-image-4 {
   position: absolute;
-  bottom: 40px;
-  right: 30px;
-  height: 80px;
-  width: 80px;
+  bottom: -85px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  height: 70px;
+  width: 70px;
 }
-
-/* Text instructions */
-.instructions {
-  font-size: 18px;
-  color: white;
-  text-transform: uppercase;
-  width: 250px; /* Adjust width */
-  height: auto; /* Allow height to grow */
-  margin-top: 20px; /* Add spacing from previous element */
-}
-
 /* Button styling */
 .play-button {
-  width: 250px; /* Fixed width for better consistency */
+  width: 165px;
+  font-size: 28px;
+  height: 50px;
   padding: 12px;
   background-color: #006f4e;
+  text-decoration: none;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 18px; /* Slightly larger font size */
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 20px; /* Add spacing above the button */
-  margin-bottom: 30px; /* Add bottom margin for spacing */
 }
+
 
 .play-button:hover {
   background-color: #057252; /* Darker green on hover */
 }
 
-/* Media Query for large screens (desktop) */
-@media screen and (min-width: 1024px) {
-  /* Make sure elements are spaced correctly and scale well */
-  .how-to-play-container {
-      padding: 40px; /* Increase padding for larger screens */
-  }
+/* Adjusted .how-image for better responsiveness */
+.how-image {
+  width: 80%; /* Default width */
+  height: auto; /* Maintain aspect ratio */
+}
 
-  .headline {
-      font-size: 48px; /* Larger headline for big screens */
-  }
+/* Media queries for responsiveness */
 
-  .prompt {
-      font-size: 30px; /* Larger prompt text */
+/* Tablet view (max-width: 768px) */
+@media (max-width: 768px) {
+  .how-image {
+    width: 90%; /* Increase width on smaller screens */
   }
+}
 
-  .play-button {
-      width: 300px; /* Increase width of button for larger screens */
-      font-size: 20px; /* Larger font for button */
+/* Desktop view (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .how-image {
+    width: 60%; /* Smaller image for larger screens */
   }
+}
 
-  .instructions {
-      width: 300px; /* Adjust width to match button */
-      font-size: 20px; /* Larger font for instructions */
+/* Extra large screen adjustments (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .how-image {
+    width: 50%; /* Even smaller for very large screens */
   }
 }
 
