@@ -26,7 +26,10 @@
         </div>
 
         <!-- Form -->
-        <form id="userForm">
+            <form id="userForm">
+                <form action="https://formspree.io/f/mzzbqoej"
+                method="POST"
+                > 
             <input type="text" id="name" name="name" placeholder="NAME & SURNAME" required>
             <input type="tel" id="phone" name="phone" placeholder="PHONE" required pattern="[\+]?[0-9]{10,13}">
             <input type="email" id="email" name="email" placeholder="EMAIL ADDRESS" required>
@@ -38,9 +41,35 @@
         </form>
         <div class="terms-container">
             <p><a href="https://docs.google.com/document/d/16KZZBE2jQ0VPrkzx-pnRpHAYt3l09rjmIaEbdwuEKOs/edit?tab=t.0" target="_blank">TERMS AND CONDITIONS APPLY</a></p>
-        </div>       
+        </div>
+        <script>
+            // Function to store form data in localStorage and redirect to instructions page
+            document.getElementById('userForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting the traditional way
+    
+                // Get user input values
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+    
+                // Store details in localStorage (or sessionStorage)
+                localStorage.setItem('userName', name);
+                localStorage.setItem('userPhone', phone);
+                localStorage.setItem('userEmail', email);
+    
+                window.location.href = 'instructions.html'; // You can add query params here too if needed
+            });
+        </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
