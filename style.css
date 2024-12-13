@@ -211,7 +211,7 @@ button:hover {
 }
 
   h1 {
-    font-size: 28px; /* Larger h1 for desktop */
+    font-size: 18px; /* Larger h1 for desktop */
     padding: 0 10px; /* Add padding */
     word-wrap: normal; /* Prevent word wrapping on desktop */
   }
