@@ -16,6 +16,19 @@ h2 {
     margin-bottom: 5px; /* Reduce the space between h2 and .congrats */
 }
 
+.claim-btn {
+  width: 20%;
+  padding: 12px;
+  background-color: #006f4e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+}
+
 img 
 {
     width: 80px;
