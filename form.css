@@ -9,6 +9,7 @@ body {
     align-items: center;
     text-align: center;
     max-height: 100vh; /* Ensure body covers full viewport height */
+    overflow: hidden;
   }
   
   #userForm {
