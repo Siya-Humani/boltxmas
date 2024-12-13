@@ -38,12 +38,11 @@ body {
 
 .main {
     display: flex;
-    background: #017a59;
     justify-content: center;
     border-radius: 10px;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     margin: 50px 150px 50px;
     padding: 0;
 }
@@ -59,6 +58,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 5s ease-in-out;
     font-weight: 300;
     color: #fff;
     letter-spacing: 0.1em;
@@ -77,7 +77,7 @@ body {
     clip-path: polygon(50% 0%, 15% 100%, 63% 100%);
 }
 
-.spinbtn {
+.spinBtn {
     background-color: #ff0000;
     color: red;
     padding: 10px 10px;
@@ -103,6 +103,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 0 20px #24c69c, 0 0 0 25px #fff;
+    transition: transform 1s ease-out;
 }
 /* Each pie slice */
 .main .wheel .image {
@@ -130,6 +131,92 @@ body {
     user-select: none;
 }
 
+.footer {
+    display: flex;  /* Use flexbox for centering */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    margin-top: 20px;  /* Space between the main section and footer */
+    color: #fff;
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+/* Snow Image 1 - Top Left (existing one) */
+.snow-image {
+    position: absolute; /* Absolute positioning */
+    top: 30px; /* Distance from the top */
+    left: 30px; /* Distance from the left */
+    height: 80px; /* Snow image size */
+    width: 80px;
+  }
+  
+  /* Snow Image 2 - Top Right */
+  .snow-image-2 {
+    position: absolute;
+    top: 80px; /* Adjust top position */
+    right: 70px; /* Distance from the right */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 3 - Bottom Left */
+  .snow-image-3 {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom */
+    left: 10px; /* Distance from the left */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 4 - Bottom Right */
+  .snow-image-4 {
+    position: absolute;
+    bottom: 40px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    height: 80px;
+    width: 80px;
+  }
+
+/* Snow image effects */
+.snow-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snow-image, .snow-image-2, .snow-image-3, .snow-image-4 {
+    position: absolute;
+    animation: snow-fall 5s infinite linear;
+}
+
+.snow-image-2 {
+    animation-delay: 1s;
+}
+
+.snow-image-3 {
+    animation-delay: 2s;
+}
+
+.snow-image-4 {
+    animation-delay: 3s;
+}
+
+/* Snow animation */
+@keyframes snow-fall {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 100%;
+    }
+}
 .footer {
     display: flex;  /* Use flexbox for centering */
     justify-content: center;  /* Center horizontally */
