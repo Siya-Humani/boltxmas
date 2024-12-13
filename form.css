@@ -160,7 +160,7 @@ body {
     }
   
     p {
-      font-size: 18px; /* Adjust paragraph size for tablet */
+      font-size: 16px; /* Adjust paragraph size for tablet */
     }
   
     button {
@@ -181,7 +181,7 @@ body {
     }
   
     p {
-      font-size: 20px; /* Increase paragraph size for desktop */
+      font-size: 16px; /* Increase paragraph size for desktop */
     }
   
     .form-image {
