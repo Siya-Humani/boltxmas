@@ -37,7 +37,10 @@
         // Function to store form data in localStorage and redirect to instructions page
         document.getElementById('userForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the form from submitting the traditional way
-
+            <form id="userForm">
+            <form action="https://formspree.io/f/mzzbqoej"
+            method="POST"
+            > 
             // Get user input values
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
