@@ -61,43 +61,7 @@ body {
   #userForm button {
     cursor: pointer;
   }
-  
-  /* Snow Image 1 - Top Left (existing one) */
-  .snow-image {
-    position: absolute; /* Absolute positioning */
-    top: 40px; /* Distance from the top */
-    left: 30px; /* Distance from the left */
-    height: 80px; /* Snow image size */
-    width: 80px;
-  }
-  
-  /* Snow Image 2 - Top Right */
-  .snow-image-2 {
-    position: absolute;
-    top: 80px; /* Adjust top position */
-    right: 30px; /* Distance from the right */
-    height: 60px;
-    width: 60px;
-  }
-  
-  /* Snow Image 3 - Bottom Left */
-  .snow-image-3 {
-    position: absolute;
-    bottom: 100px; /* Distance from the bottom */
-    left: 30px; /* Distance from the left */
-    height: 60px;
-    width: 60px;
-  }
-  
-  /* Snow Image 4 - Bottom Right */
-  .snow-image-4 {
-    position: absolute;
-    bottom: 20px; /* Distance from the bottom */
-    right: 30px; /* Distance from the right */
-    height: 80px;
-    width: 80px;
-  }
-  
+
   .container {
     width: 50%;
     min-width: 600px;
@@ -132,7 +96,7 @@ body {
   }
   
   p {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 300;
     color: #ffffff;
     padding-top: 0; /* Reduce space between the image and the paragraph */
