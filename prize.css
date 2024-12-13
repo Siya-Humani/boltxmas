@@ -1,5 +1,5 @@
 body {
-    font-family: 'Inter', Arial, sans-serif; /* Use Inter as the primary font */
+  font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: center;
@@ -11,28 +11,91 @@ body {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 20px;
     color: #ffffff;
     margin-bottom: 5px; /* Reduce the space between h2 and .congrats */
 }
 
+img 
+{
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
 .congrats {
-    width: 400px;
-    height: 400px;
-    margin-bottom: 0;
+  width: 300px;
+  height: auto;
+  margin-top: 100px;
 }
 
 .form-image {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 100px;
 }
 
 p {
     color: white;
-    margin-top: 20px; /* Optional: add a little space between the paragraph and the rest */
+    margin-top: 20px;
+    font-weight: 300;
 }
 
 a {
   color: white;
   text-decoration: underline;
 }
+/* Snow Image 1 - Top Left (existing one) */
+.snow-image {
+    position: absolute; /* Absolute positioning */
+    top: 80px; /* Distance from the top */
+    left: 50px; /* Distance from the left */
+    height: 50px; /* Snow image size */
+    width: 50px;
+  }
+  
+  /* Snow Image 2 - Top Right */
+  .snow-image-2 {
+    position: absolute;
+    top: 165px; /* Adjust top position */
+    right: 50px; /* Distance from the right */
+    height: 50px;
+    width: 50px;
+  }
+  
+  /* Snow Image 3 - Bottom Left */
+  .snow-image-3 {
+    position: absolute;
+    bottom: -70px; /* Distance from the bottom */
+    left: 30px; /* Distance from the left */
+    height: 50px;
+    width: 50px;
+  }
+  
+  /* Snow Image 4 - Bottom Right */
+  .snow-image-4 {
+    position: absolute;
+    bottom: -85px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    height: 70px;
+    width: 70px;
+  }
+  .terms-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .terms-container p {
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  .terms-container a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .terms-container a:hover {
+    text-decoration: underline;
+  }
+  

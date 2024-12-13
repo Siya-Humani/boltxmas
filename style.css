@@ -19,7 +19,7 @@ body {
 }
 
 #userForm input {
-  width: 80%;
+  width: 50%;
   padding: 6px; /* Reduced padding for smaller form elements */
   margin: 2px 0; /* Reduced margin between form elements */
   box-sizing: border-box;

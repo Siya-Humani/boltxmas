@@ -11,13 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const today = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
       return lastPlayed !== today;
     }
-  
-    // Function to set the last played date
-    function setLastPlayedDate() {
-      const today = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
-      localStorage.setItem('lastPlayedDate', today);
-    }
-  
+
+
     // Function to check if a prize has already been claimed today
     function hasClaimedPrize(prize) {
       const claimedPrizes = JSON.parse(localStorage.getItem('claimedPrizes')) || {};
@@ -47,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const finalDegree = randomDegree + (360 * 3); // 3 full rotations (360 * 3)
   
       // Apply the rotation with a smooth transition
-      wheel.style.transition = `transform ${spinDuration}ms ease-out`;
-      wheel.style.transform = `rotate(${finalDegree}deg)`;
+      wheel.style.transition = transform ${spinDuration}ms ease-out;
+      wheel.style.transform = rotate(${finalDegree}deg);
   
       // After the spin ends, calculate which slice landed on
       setTimeout(function() {
@@ -66,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
               alert("Prize 1 has already been claimed today. Try again tomorrow!");
               return; // Prevent multiple claims of Prize 1
             }
-            prizeUrl = "merch_2nd.html"; // Redirect to Prize 1 page
+            prizeUrl = "merch.html"; // Redirect to Prize 1 page
             claimPrize(1); // Mark Prize 1 as claimed
             break;
           case 2: // If the wheel lands on Prize 3
@@ -91,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }, spinDuration); // Timeout matches the spin duration
     });
   });
-  
+
   
 
 
