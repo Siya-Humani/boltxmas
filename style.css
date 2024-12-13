@@ -191,7 +191,7 @@ button:hover {
   }
 
   h1 {
-    font-size: 30px; /* Slightly larger h1 size */
+    font-size: 18px; /* Slightly larger h1 size */
     padding: 0 30px; /* Add padding for larger screens */
   }
 
@@ -217,7 +217,7 @@ button:hover {
   }
 
   p {
-    font-size: 20px; /* Increase paragraph size for desktop */
+    font-size: 18px; /* Increase paragraph size for desktop */
   }
 
   .form-image {
