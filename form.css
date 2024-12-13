@@ -96,7 +96,7 @@ body {
   }
   
   p {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     color: #ffffff;
     padding-top: 0; /* Reduce space between the image and the paragraph */
@@ -107,6 +107,11 @@ body {
     font-weight: bold;
     font-size: 10px;
   }
+
+  h1 {
+      font-size: 18px; /* Slightly larger h1 size */
+      padding: 0 30px; /* Add padding for larger screens */
+    }
   
   form {
     background: #00b47f;
@@ -155,7 +160,7 @@ body {
     }
   
     h1 {
-      font-size: 30px; /* Slightly larger h1 size */
+      font-size: 18px; /* Slightly larger h1 size */
       padding: 0 30px; /* Add padding for larger screens */
     }
   
@@ -175,7 +180,7 @@ body {
   }
   
     h1 {
-      font-size: 28px; /* Larger h1 for desktop */
+      font-size: 18px; /* Larger h1 for desktop */
       padding: 0 10px; /* Add padding */
       word-wrap: normal; /* Prevent word wrapping on desktop */
     }
