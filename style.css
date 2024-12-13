@@ -83,7 +83,7 @@ button {
 /* Snow Image 3 - Bottom Left */
 .snow-image-3 {
   position: absolute;
-  bottom: 90px; /* Distance from the bottom */
+  bottom: 70px; /* Distance from the bottom */
   left: 30px; /* Distance from the left */
   height: 60px;
   width: 60px;
@@ -132,7 +132,7 @@ button {
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #ffffff;
   padding-top: 0; /* Reduce space between the image and the paragraph */
