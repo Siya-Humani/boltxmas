@@ -19,7 +19,7 @@ body {
 }
 
 #userForm input {
-  width: 50%;
+  width: 30%;
   padding: 6px; /* Reduced padding for smaller form elements */
   margin: 2px 0; /* Reduced margin between form elements */
   box-sizing: border-box;
@@ -204,7 +204,7 @@ button:hover {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 200px; /* Expand container width for larger screens */
+    max-width: 600px; /* Expand container width for larger screens */
   }
 
   h1 {
