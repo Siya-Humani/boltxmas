@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const spinBtn = document.getElementById('spinbtn');
   const wheel = document.getElementById('wheel');
-  const numSlices = 200;  // Number of prize slices
+  const numSlices = 6;  // Number of prize slices
   const sliceDegrees = 360 / numSlices;  // Each slice spans 1.8 degrees (360 / 200)
 
   // Load game state from localStorage
