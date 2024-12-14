@@ -9,7 +9,6 @@ body {
     align-items: center;
     text-align: center;
     max-height: 100vh; /* Ensure body covers full viewport height */
-    overflow: hidden;
   }
   
   #userForm {
@@ -62,7 +61,43 @@ body {
   #userForm button {
     cursor: pointer;
   }
-
+  
+  /* Snow Image 1 - Top Left (existing one) */
+  .snow-image {
+    position: absolute; /* Absolute positioning */
+    top: 40px; /* Distance from the top */
+    left: 30px; /* Distance from the left */
+    height: 80px; /* Snow image size */
+    width: 80px;
+  }
+  
+  /* Snow Image 2 - Top Right */
+  .snow-image-2 {
+    position: absolute;
+    top: 80px; /* Adjust top position */
+    right: 30px; /* Distance from the right */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 3 - Bottom Left */
+  .snow-image-3 {
+    position: absolute;
+    bottom: 100px; /* Distance from the bottom */
+    left: 30px; /* Distance from the left */
+    height: 60px;
+    width: 60px;
+  }
+  
+  /* Snow Image 4 - Bottom Right */
+  .snow-image-4 {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    height: 80px;
+    width: 80px;
+  }
+  
   .container {
     width: 50%;
     min-width: 600px;
@@ -108,11 +143,6 @@ body {
     font-weight: bold;
     font-size: 10px;
   }
-
-  h1 {
-      font-size: 18px; /* Slightly larger h1 size */
-      padding: 0 30px; /* Add padding for larger screens */
-    }
   
   form {
     background: #00b47f;
@@ -161,12 +191,12 @@ body {
     }
   
     h1 {
-      font-size: 18px; /* Slightly larger h1 size */
+      font-size: 30px; /* Slightly larger h1 size */
       padding: 0 30px; /* Add padding for larger screens */
     }
   
     p {
-      font-size: 16px; /* Adjust paragraph size for tablet */
+      font-size: 18px; /* Adjust paragraph size for tablet */
     }
   
     button {
@@ -181,13 +211,13 @@ body {
   }
   
     h1 {
-      font-size: 18px; /* Larger h1 for desktop */
+      font-size: 28px; /* Larger h1 for desktop */
       padding: 0 10px; /* Add padding */
       word-wrap: normal; /* Prevent word wrapping on desktop */
     }
   
     p {
-      font-size: 16px; /* Increase paragraph size for desktop */
+      font-size: 20px; /* Increase paragraph size for desktop */
     }
   
     .form-image {

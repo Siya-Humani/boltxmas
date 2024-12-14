@@ -58,41 +58,104 @@ a {
   color: white;
   text-decoration: underline;
 }
-/* Snow Image 1 - Top Left (existing one) */
 .snow-image {
-    position: absolute; /* Absolute positioning */
-    top: 80px; /* Distance from the top */
-    left: 50px; /* Distance from the left */
-    height: 50px; /* Snow image size */
-    width: 50px;
+  position: absolute; /* Absolute positioning */
+  top: 80px; /* Distance from the top */
+  left: 50px; /* Distance from the left */
+  height: 50px; /* Snow image size */
+  width: 50px;
+}
+
+/* Snow Image 2 - Top Right */
+.snow-image-2 {
+  position: absolute;
+  top: 165px; /* Adjust top position */
+  right: 50px; /* Distance from the right */
+  height: 50px;
+  width: 50px;
+}
+
+/* Snow Image 3 - Bottom Left */
+.snow-image-3 {
+  position: absolute;
+  bottom: -70px; /* Distance from the bottom */
+  left: 30px; /* Distance from the left */
+  height: 50px;
+  width: 50px;
+}
+
+/* Snow Image 4 - Bottom Right */
+.snow-image-4 {
+  position: absolute;
+  bottom: -85px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  height: 70px;
+  width: 70px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .snow-image {
+    top: 50px; /* Adjust top position for smaller screens */
+    left: 20px; /* Move it more to the left on mobile */
+    height: 40px; /* Smaller snow image on mobile */
+    width: 40px;
   }
-  
-  /* Snow Image 2 - Top Right */
+
   .snow-image-2 {
-    position: absolute;
-    top: 165px; /* Adjust top position */
-    right: 50px; /* Distance from the right */
-    height: 50px;
-    width: 50px;
+    top: 120px; /* Adjust top position for mobile */
+    right: 20px; /* Adjust right for mobile */
+    height: 40px;
+    width: 40px;
   }
-  
-  /* Snow Image 3 - Bottom Left */
+
   .snow-image-3 {
-    position: absolute;
-    bottom: -70px; /* Distance from the bottom */
-    left: 30px; /* Distance from the left */
-    height: 50px;
+    bottom: -50px; /* Adjust bottom position for mobile */
+    left: 20px; /* Adjust left for mobile */
+    height: 40px;
+    width: 40px;
+  }
+
+  .snow-image-4 {
+    bottom: -65px; /* Adjust bottom for mobile */
+    right: 20px; /* Adjust right for mobile */
+    height: 50px; /* Slightly smaller on mobile */
     width: 50px;
   }
-  
-  /* Snow Image 4 - Bottom Right */
-  .snow-image-4 {
-    position: absolute;
-    bottom: -85px; /* Distance from the bottom */
-    right: 30px; /* Distance from the right */
-    height: 70px;
-    width: 70px;
+}
+
+/* For very small devices like portrait phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .snow-image {
+    top: 30px;
+    left: 10px;
+    height: 35px;
+    width: 35px;
   }
+
+  .snow-image-2 {
+    top: 100px;
+    right: 10px;
+    height: 35px;
+    width: 35px;
+  }
+
+  .snow-image-3 {
+    bottom: -40px;
+    left: 10px;
+    height: 35px;
+    width: 35px;
+  }
+
+  .snow-image-4 {
+    bottom: -50px;
+    right: 10px;
+    height: 45px;
+    width: 45px;
+  }
+}
+
+
   .terms-container {
     text-align: center;
     margin-top: 20px;
@@ -112,3 +175,29 @@ a {
     text-decoration: underline;
   }
   
+  /* Default styles (for desktop or larger screens) */
+p {
+  font-size: 16px;
+  margin-bottom: 16px; /* Space between paragraphs */
+  line-height: 1.5;
+
+}
+
+/* Mobile-specific styles (for screens smaller than 768px) */
+@media (max-width: 768px) {
+  p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin-bottom: 12px; /* Adjust spacing between paragraphs */
+  }
+}
+
+p {
+  text-align: center; /* Default left-aligned */
+}
+
+@media (max-width: 768px) {
+  p {
+    text-align: center; /* Center text on mobile */
+  }
+}
+

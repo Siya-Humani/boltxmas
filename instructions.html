@@ -33,15 +33,3 @@
     </div>
 </body>
 </html>
-
-
-    <script>
-        // Function to get query parameters (name, phone, email)
-        function getQueryParams() {
-            const params = new URLSearchParams(window.location.search);
-            const name = params.get('name') || 'Guest';
-            const phone = params.get('phone') || 'N/A';
-            const email = params.get('email') || 'N/A';
-            return { name, phone, email };
-        }
-    </script>
