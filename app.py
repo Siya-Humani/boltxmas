@@ -1,36 +1,37 @@
-from flask import Flask, render_template, redirect, url_for, request, session, jsonify
+from flask import Flask, render_template, redirect, url_for, request, session
 import os
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Secret key for session management
 
-# Path to the file that will track the number of winners
-WINNER_FILE = 'winners_count.txt'
+# Path to the file that will track the winners (names and count)
+WINNER_FILE = 'winners_list.txt'
 MAX_WINNERS = 200
 
-# Initialize the file if it doesn't exist
+# Initialize the winner file if it doesn't exist
 if not os.path.exists(WINNER_FILE):
     with open(WINNER_FILE, 'w') as f:
-        f.write('0')
+        f.write('')  # Start with an empty file
 
-def get_winner_count():
-    """Get the current number of winners from the file."""
+def get_winners_list():
+    """Get the list of winners from the file."""
     with open(WINNER_FILE, 'r') as f:
-        return int(f.read().strip())
+        winners = f.readlines()
+    return [winner.strip() for winner in winners]  # Remove any newline characters
 
-def increment_winner_count():
-    """Increment the winner count in the file."""
-    current_count = get_winner_count()
-    if current_count < MAX_WINNERS:
-        current_count += 1
-        with open(WINNER_FILE, 'w') as f:
-            f.write(str(current_count))
-    return current_count
+def add_winner(winner_name):
+    """Add a winner to the list if the max winner count is not reached."""
+    winners = get_winners_list()
+    if len(winners) < MAX_WINNERS and winner_name not in winners:
+        winners.append(winner_name)
+        with open(WINNER_FILE, 'a') as f:
+            f.write(winner_name + '\n')  # Append the new winner to the file
+    return len(winners)
 
 @app.route('/')
 def index():
     """Render the main game page."""
-    winner_count = get_winner_count()
+    winner_count = len(get_winners_list())  # Get the current count of winners
 
     # If user has already played, redirect to tryagain
     if session.get('has_played', False):
@@ -41,7 +42,7 @@ def index():
 @app.route('/spin', methods=['POST'])
 def spin():
     """Handle spin and determine if the user wins."""
-    winner_count = get_winner_count()
+    winner_count = len(get_winners_list())
 
     # If the number of winners is less than the max allowed and user hasn't played yet
     if winner_count < MAX_WINNERS:
@@ -55,7 +56,8 @@ def spin():
         session['has_played'] = True
 
         if prize_landed:
-            new_winner_count = increment_winner_count()
+            winner_name = request.form.get('winner_name', 'Unknown Player')
+            new_winner_count = add_winner(winner_name)
             if new_winner_count <= MAX_WINNERS:
                 return redirect(url_for('prize'))
             else:
@@ -77,16 +79,12 @@ def try_again():
 
 @app.route('/allwinners')
 def all_winners():
-    """Page shown when the maximum number of winners is reached."""
-    return render_template('allwinners.html')
+    """Page showing all winners when the max number is reached."""
+    winners = get_winners_list()  # Get the current list of winners
+    winner_count = len(winners)  # Get the count of winners
+    return render_template('allwinners.html', winners=winners, winner_count=winner_count)
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-@app.route('/allwinners')
-def all_winners():
-    """Page shown when the maximum number of winners is reached."""
-    winners = get_winners_list()  # Get the current list of winners
-    winner_count = len(winners)  # Get the count of winners
-    return render_template('allwinners.html', winners=winners, winner_count=winner_count)
 
