@@ -83,3 +83,10 @@ def all_winners():
 if __name__ == '__main__':
     app.run(debug=True)
 
+@app.route('/allwinners')
+def all_winners():
+    """Page shown when the maximum number of winners is reached."""
+    winners = get_winners_list()  # Get the current list of winners
+    winner_count = len(winners)  # Get the count of winners
+    return render_template('allwinners.html', winners=winners, winner_count=winner_count)
+
