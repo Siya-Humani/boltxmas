@@ -189,7 +189,7 @@ button:hover {
 /* Mobile adjustment (for smaller screens) */
 @media (max-width: 600px) {
   #userForm input {
-    width: 60%; /* Increase width on smaller screens */
+    width: 50%; /* Increase width on smaller screens */
     padding: 8px; /* Slightly larger padding on mobile */
   }
 }
