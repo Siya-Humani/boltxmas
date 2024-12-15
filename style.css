@@ -20,7 +20,7 @@ body {
 }
 
 #userForm input {
-  width: 80%;
+  width: 70%;
   padding: 6px; /* Reduced padding for smaller form elements */
   margin: 2px 0; /* Reduced margin between form elements */
   box-sizing: border-box;
@@ -142,7 +142,7 @@ button {
 }
 
 p {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 300;
   color: #ffffff;
   padding-top: 0; /* Reduce space between the image and the paragraph */
@@ -164,7 +164,7 @@ form {
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  width: 100%;
+  width: 60%;
   padding: 12px 15px;
   margin-bottom: 15px;
   border-radius: 5px;
@@ -191,6 +191,10 @@ button:hover {
   #userForm input {
     width: 60%; /* Increase width on smaller screens */
     padding: 8px; /* Slightly larger padding on mobile */
+  }
+
+  p {
+    font-size: 14px; /* Adjust paragraph size for tablet */
   }
 }
 
