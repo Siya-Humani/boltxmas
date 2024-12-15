@@ -65,16 +65,16 @@ body {
   /* Snow Image 1 - Top Left (existing one) */
   .snow-image {
     position: absolute; /* Absolute positioning */
-    top: 40px; /* Distance from the top */
+    top: 60px; /* Distance from the top */
     left: 30px; /* Distance from the left */
-    height: 80px; /* Snow image size */
-    width: 80px;
+    height: 50px; /* Snow image size */
+    width: 50px;
   }
   
   /* Snow Image 2 - Top Right */
   .snow-image-2 {
     position: absolute;
-    top: 80px; /* Adjust top position */
+    top: 100px; /* Adjust top position */
     right: 30px; /* Distance from the right */
     height: 60px;
     width: 60px;
