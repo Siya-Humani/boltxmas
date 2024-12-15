@@ -195,6 +195,34 @@ button:hover {
 
   p {
     font-size: 14px; /* Adjust paragraph size for tablet */
+    line-height: 1.5;
+  }
+    .snow-image {
+    top: 30px;
+    left: 20px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .snow-image-2 {
+    top: 60px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .snow-image-3 {
+    bottom: 60px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .snow-image-4 {
+    bottom: 10px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
   }
 }
 
