@@ -132,7 +132,7 @@ body {
   }
   
   p {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     color: #ffffff;
     padding-top: 0; /* Reduce space between the image and the paragraph */
@@ -182,6 +182,9 @@ body {
       width: 50%; /* Increase width on smaller screens */
       padding: 8px; /* Slightly larger padding on mobile */
     }
+       p {
+      font-size: 14px; /* Adjust paragraph size for tablet */
+    }
   }
   
   /* Responsive styles for larger screens */
@@ -196,7 +199,7 @@ body {
     }
   
     p {
-      font-size: 13px; /* Adjust paragraph size for tablet */
+      font-size: 18px; /* Adjust paragraph size for tablet */
     }
   
     button {
