@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Optional: Display some feedback before redirecting
         setTimeout(function() {
-          window.location.href = 'prize.html';
+          window.location.href = 'allwinners.html';
         }, 1000);  // Delay the redirect by 1 second for a better experience
       } else {
         localStorage.setItem('hasPlayed', 'true');
