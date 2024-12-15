@@ -84,7 +84,7 @@ button {
 /* Snow Image 3 - Bottom Left */
 .snow-image-3 {
   position: absolute;
-  bottom: 100px; /* Distance from the bottom */
+  bottom: 80px; /* Distance from the bottom */
   left: 30px; /* Distance from the left */
   height: 60px;
   width: 60px;
@@ -93,7 +93,7 @@ button {
 /* Snow Image 4 - Bottom Right */
 .snow-image-4 {
   position: absolute;
-  bottom: 20px; /* Distance from the bottom */
+  bottom: 10px; /* Distance from the bottom */
   right: 30px; /* Distance from the right */
   height: 80px;
   width: 80px;
