@@ -99,7 +99,7 @@ body {
   }
   
   .container {
-    width: 80%;
+    width: 100%;
     min-width: 600px;
     padding: 20px;
     box-sizing: border-box;
