@@ -47,7 +47,7 @@ body {
 }
 
 button {
-  width: 40%;
+  width: 50%;
   padding: 12px;
   background-color: #006f4e;
   color: #fff;
@@ -189,7 +189,7 @@ button:hover {
 /* Mobile adjustment (for smaller screens) */
 @media (max-width: 600px) {
   #userForm input {
-    width: 50%; /* Increase width on smaller screens */
+    width: 60%; /* Increase width on smaller screens */
     padding: 8px; /* Slightly larger padding on mobile */
   }
 }
@@ -211,7 +211,7 @@ button:hover {
 
   button {
     height: 40px;
-    width: 35px;
+    width: 40px;
     margin-top: 20px; /* Add margin to separate from input fields */
   }
 
@@ -236,23 +236,5 @@ button:hover {
   }
 
   button {
-    width: 40%; /* Button width for large screens */
+    width: 50%; /* Button width for large screens */
   }
-  
-/* Mobile-specific styles (for screens smaller than 768px) */
-@media (max-width: 768px) {
-  p {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    margin-bottom: 12px; /* Adjust spacing between paragraphs */
-  }
-}
-
-p {
-  text-align: center; /* Default left-aligned */
-}
-
-@media (max-width: 768px) {
-  p {
-    text-align: center; /* Center text on mobile */
-  }
-}

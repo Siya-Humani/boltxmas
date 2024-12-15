@@ -2,26 +2,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const spinBtn = document.getElementById('spinbtn');
   const wheel = document.getElementById('wheel');
   const numSlices = 6;  // Number of prize slices
-  const sliceDegrees = 360 / numSlices;  // Each slice spans 1.8 degrees (360 / 200)
-
+  const sliceDegrees = 360 / numSlices;  // Each slice spans 60 degrees
+  
   // Load game state from localStorage
   const prizeWon = localStorage.getItem('prizeWon');
   const hasPlayed = localStorage.getItem('hasPlayed');
-  const totalWinners = parseInt(localStorage.getItem('totalWinners') || '0');  // Get the total number of winners
-  const maxWinners = 200;  // Maximum number of winners allowed
 
-  // If 200 people have already won or the player has already won, show the "Try Again" page
-  if (totalWinners >= maxWinners) {
-    window.location.href = 'tryagain.html';  // Redirect to all winners page if the max is reached
-  } else if (prizeWon === 'true') {
-    window.location.href = 'tryagain.html';  // Redirect if the player has already won
+  // If prize is won, or player has already played, show tryagain page
+  if (prizeWon === 'true') {
+    window.location.href = 'tryagain.html';
   } else if (hasPlayed === 'true') {
-    window.location.href = 'tryagain.html';  // Redirect if the player has already played
+    window.location.href = 'tryagain.html';
   }
 
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
-    const spinDuration = Math.floor(Math.random() * 2000) + 3000;
+    const spinDuration = Math.floor(Math.random() * 2000) + 3000; 
     const randomDegree = Math.floor(Math.random() * 360);
     const finalDegree = randomDegree + (360 * 3);  // 3 full rotations
 
@@ -33,24 +29,27 @@ document.addEventListener('DOMContentLoaded', function() {
       const landingDegree = finalDegree % 360;
       const landingSlice = Math.floor(landingDegree / sliceDegrees);
 
-      // If player lands on Slice 4 (Prize), update prizeWon status
-      if (landingSlice === 3) {  // Slice 4 is at index 3
+      const prizeSliceIndex1 = 2;  // Slice 4 (first prize) is indexed at 3
+      const prizeSliceIndex2 = 5;  // Slice 6 (second prize) is indexed at 5
+      
+      if (landingSlice === prizeSliceIndex1) {
+        // Player landed on Slice 4 (first prize)
         localStorage.setItem('prizeWon', 'true');
+        localStorage.setItem('prizeType', 'first'); // Optional: Store which prize was won
         localStorage.setItem('hasPlayed', 'true');
-        // Update the total winners count
-        let updatedTotalWinners = totalWinners + 1;
-        localStorage.setItem('totalWinners', updatedTotalWinners.toString());
-
-        // Optional: Display some feedback before redirecting
-        setTimeout(function() {
-          window.location.href = 'allwinners.html';
-        }, 1000);  // Delay the redirect by 1 second for a better experience
+        window.location.href = 'firstcongrats.html';  // Redirect to the first prize congrats page
+      } else if (landingSlice === prizeSliceIndex2) {
+        // Player landed on Slice 6 (second prize)
+        localStorage.setItem('prizeWon', 'true');
+        localStorage.setItem('prizeType', 'second'); // Optional: Store which prize was won
+        localStorage.setItem('hasPlayed', 'true');
+        window.location.href = 'secondcongrats.html';  // Redirect to the second prize congrats page
       } else {
+        // Player landed on any other slice (no prize)
         localStorage.setItem('hasPlayed', 'true');
-        setTimeout(function() {
-          window.location.href = 'tryagain.html';
-        }, 1000);  // Delay the redirect by 1 second
+        window.location.href = 'tryagain.html';  // Redirect to try again page
       }
+      
     }, spinDuration);
   });
 });

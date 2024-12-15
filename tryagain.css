@@ -40,8 +40,9 @@ h2 {
 
 p {
   color: white;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 20px; /* Optional: add a little space between the paragraph and the rest */
+  font-size: 15px;
 }
 
 .try {
