@@ -19,7 +19,7 @@ body {
   }
   
   #userForm input {
-    width: 80%;
+    width: 70%;
     padding: 6px; /* Reduced padding for smaller form elements */
     margin: 2px 0; /* Reduced margin between form elements */
     box-sizing: border-box;
@@ -99,7 +99,7 @@ body {
   }
   
   .container {
-    width: 50%;
+    width: 80%;
     min-width: 600px;
     padding: 20px;
     box-sizing: border-box;
@@ -154,7 +154,7 @@ body {
   input[type="text"],
   input[type="email"],
   input[type="tel"] {
-    width: 100%;
+    width: 60%;
     padding: 12px 15px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -191,12 +191,12 @@ body {
     }
   
     h1 {
-      font-size: 30px; /* Slightly larger h1 size */
+      font-size: 28px; /* Slightly larger h1 size */
       padding: 0 30px; /* Add padding for larger screens */
     }
   
     p {
-      font-size: 18px; /* Adjust paragraph size for tablet */
+      font-size: 16px; /* Adjust paragraph size for tablet */
     }
   
     button {
@@ -217,11 +217,11 @@ body {
     }
   
     p {
-      font-size: 20px; /* Increase paragraph size for desktop */
+      font-size: 13px; /* Increase paragraph size for desktop */
     }
   
     .form-image {
-      width: 250px;  /* Increase image size for larger screens */
+      width: 200px;  /* Increase image size for larger screens */
       height: auto;
     }
   
