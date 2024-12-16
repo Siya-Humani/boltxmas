@@ -4,15 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const numSlices = 6;  // Number of prize slices
   const sliceDegrees = 360 / numSlices;  // Each slice spans 60 degrees
   
+  // Get current date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];  // Extracts just the date part (YYYY-MM-DD)
+
   // Load game state from localStorage
   const prizeWon = localStorage.getItem('prizeWon');
-  const hasPlayed = localStorage.getItem('hasPlayed');
+  const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
-  // If prize is won, or player has already played, show tryagain page
+  // If the prize is already won or the player has already played today, show the tryagain page
   if (prizeWon === 'true') {
     window.location.href = 'tryagain.html';
-  } 
-  
+  } else if (lastPlayedDate === today) {
+    window.location.href = 'tryagain.html';  // Redirect if the player has already played today
+  }
+
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
     const spinDuration = Math.floor(Math.random() * 2000) + 3000; 
@@ -34,20 +39,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // Player landed on Slice 4 (first prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'first'); // Optional: Store which prize was won
-        localStorage.setItem('hasPlayed', 'true');
+        localStorage.setItem('lastPlayedDate', today);  // Store the current date
         window.location.href = 'firstcongrats.html';  // Redirect to the first prize congrats page
       } else if (landingSlice === prizeSliceIndex2) {
         // Player landed on Slice 6 (second prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'second'); // Optional: Store which prize was won
-        localStorage.setItem('hasPlayed', 'true');
+        localStorage.setItem('lastPlayedDate', today);  // Store the current date
         window.location.href = 'secondcongrats.html';  // Redirect to the second prize congrats page
       } else {
         // Player landed on any other slice (no prize)
-        localStorage.setItem('hasPlayed', 'true');
+        localStorage.setItem('lastPlayedDate', today);  // Store the current date
         window.location.href = 'tryagain.html';  // Redirect to try again page
       }
       
     }, spinDuration);
   });
 });
+
