@@ -11,10 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // If prize is won, or player has already played, show tryagain page
   if (prizeWon === 'true') {
     window.location.href = 'tryagain.html';
-  } else if (hasPlayed === 'true') {
-    window.location.href = 'tryagain.html';
-  }
-
+  } 
+  
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
     const spinDuration = Math.floor(Math.random() * 2000) + 3000; 
