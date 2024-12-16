@@ -3,16 +3,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const wheel = document.getElementById('wheel');
   const numSlices = 6;  // Number of prize slices
   const sliceDegrees = 360 / numSlices;  // Each slice spans 60 degrees
+
+   // Get current date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];  // Extracts just the date part (YYYY-MM-DD)
+
+  // Load game state from localStorage
+  const prizeWon = localStorage.getItem('prizeWon');
+  const lastPlayedDate = localStorage.getItem('lastPlayedDate');  // NEW: Get the last played date
+  
   
   // Load game state from localStorage
   const prizeWon = localStorage.getItem('prizeWon');
   const hasPlayed = localStorage.getItem('hasPlayed');
 
-  // If prize is won, or player has already played, show tryagain page
+    // If the prize is already won or the player has already played today, show the tryagain page
   if (prizeWon === 'true') {
     window.location.href = 'tryagain.html';
-  } else if (hasPlayed === 'true') {
-    window.location.href = 'tryagain.html';
+  } else if (lastPlayedDate === today) {  // NEW: Check if the player has already played today
+    window.location.href = 'tryagain.html';  // Redirect if the player has already played today
   }
 
   spinBtn.addEventListener('click', function() {
