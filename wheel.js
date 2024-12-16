@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const randomDegree = Math.floor(Math.random() * 360);
     const finalDegree = randomDegree + (360 * 3);  // 3 full rotations
 
-    wheel.style.transition = transform ${spinDuration}ms ease-out;
-    wheel.style.transform = rotate(${finalDegree}deg);
+    wheel.style.transition = `transform ${spinDuration}ms ease-out`;
+    wheel.style.transform = `rotate(${finalDegree}deg)`;
 
     setTimeout(function() {
       // After the spin ends, calculate which slice landed on
