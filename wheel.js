@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
   // If the prize is already won or the player has already played today, show the tryagain page
-  if (prizeWon === 'false') {
+  if (prizeWon === 'true') {
     window.location.href = 'tryagain.html';
   } else if (lastPlayedDate === today) {
     window.location.href = 'tryagain.html';  // Redirect if the player has already played today
