@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get current date in YYYY-MM-DD format
   const today = new Date().toISOString().split('T')[0];  // Extracts just the date part (YYYY-MM-DD)
 
-  // Load game state from localStorage
+ // Load game state from localStorage
+  const prizeWon = localStorage.getItem('prizeWon');
   const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
   // If the prize is already won or the player has already played today, show the tryagain page
-  
-  } if (lastPlayedDate === today) {
+  if (prizeWon === 'false') {
+    window.location.href = 'tryagain.html';
+  } else if (lastPlayedDate === today) {
     window.location.href = 'tryagain.html';  // Redirect if the player has already played today
   }
 
