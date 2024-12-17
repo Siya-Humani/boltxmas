@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         // Player landed on any other slice (no prize)
         localStorage.setItem('lastPlayedDate', today);  // Store the current date
-        window.location.href = 'tryagain.html';  // Redirect to try again page
+        window.location.href = 'allwinners.html';  // Redirect to try again page
       }
       
     }, spinDuration);
