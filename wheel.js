@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (prizeWon === 'true') {
     window.location.href = 'tryagain.html';
   } else if (lastPlayedDate === today) {
-    window.location.href = 'tryagain.html';  // Redirect if the player has already played today
+    window.location.href = 'wheel.html';  // Redirect if the player has already played today
 
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
