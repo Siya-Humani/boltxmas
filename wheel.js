@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const today = new Date().toISOString().split('T')[0];  // Extracts just the date part (YYYY-MM-DD)
 
   // Load game state from localStorage
-  const prizeWon = localStorage.getItem('prizeWon');
   const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
   // If the prize is already won or the player has already played today, show the tryagain page
-  if (prizeWon === 'true') {
-    window.location.href = 'tryagain.html';
-  } else if (lastPlayedDate === today) {
+  
+  } if (lastPlayedDate === today) {
     window.location.href = 'tryagain.html';  // Redirect if the player has already played today
   }
 
