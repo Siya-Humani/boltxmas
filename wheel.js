@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'first'); // Optional: Store which prize was won
         localStorage.setItem('lastPlayedDate', today);  // Store the current date
-        window.location.href = 'firstcongrats.html';  // Redirect to the first prize congrats page
+        window.location.href = 'allwinners.html';  // Redirect to the first prize congrats page
       } else {
         // Player landed on any other slice (no prize)
         localStorage.setItem('lastPlayedDate', today);  // Store the current date
