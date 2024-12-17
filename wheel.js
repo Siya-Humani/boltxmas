@@ -16,12 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.location.href = 'tryagain.html';
   } else if (lastPlayedDate === today) {
     window.location.href = 'tryagain.html';  // Redirect if the player has already played today
-  } else {
-  // If the user has not played today, redirect to the wheel page
-  console.log("The user has not played today. Redirecting to the game...");
-  localStorage.setItem('lastPlayedDate', today); // Record today's date
-  window.location.href = 'wheel.html';
-}
 
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
