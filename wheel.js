@@ -32,18 +32,25 @@ document.addEventListener('DOMContentLoaded', function() {
       const landingDegree = finalDegree % 360;
       const landingSlice = Math.floor(landingDegree / sliceDegrees);
 
-      const prizeSliceIndex1 = 4;  // Slice 4 (first prize) is indexed at 3
+      const prizeSliceIndex1 = 2;  // Slice 4 (first prize) is indexed at 3
+      const prizeSliceIndex2 = 6;  // Slice 6 (second prize) is indexed at 5
       
       if (landingSlice === prizeSliceIndex1) {
         // Player landed on Slice 4 (first prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'first'); // Optional: Store which prize was won
-        localStorage.setItem('lastPlayedDate', today);  // Store the current date
-        window.location.href = 'allwinners.html';  // Redirect to the first prize congrats page
+        localStorage.setItem('hasPlayed', 'true');
+        window.location.href = 'firstcongrats.html';  // Redirect to the first prize congrats page
+      } else if (landingSlice === prizeSliceIndex2) {
+        // Player landed on Slice 6 (second prize)
+        localStorage.setItem('prizeWon', 'true');
+        localStorage.setItem('prizeType', 'second'); // Optional: Store which prize was won
+        localStorage.setItem('hasPlayed', 'true');
+        window.location.href = 'secondcongrats.html';  // Redirect to the second prize congrats page
       } else {
         // Player landed on any other slice (no prize)
-        localStorage.setItem('lastPlayedDate', today);  // Store the current date
-        window.location.href = 'allwinners.html';  // Redirect to try again page
+        localStorage.setItem('hasPlayed', 'true');
+        window.location.href = 'tryagain.html';  // Redirect to try again page
       }
       
     }, spinDuration);
