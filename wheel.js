@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const landingDegree = finalDegree % 360;
       const landingSlice = Math.floor(landingDegree / sliceDegrees);
 
-      const prizeSliceIndex1 = 3;  // Slice 4 (first prize) is indexed at 3
-      const prizeSliceIndex2 = 6;  // Slice 6 (second prize) is indexed at 5
+      const prizeSliceIndex1 = 2;  // Slice 4 (first prize) is indexed at 3
+      const prizeSliceIndex2 = 5;  // Slice 6 (second prize) is indexed at 5
       
       if (landingSlice === prizeSliceIndex3) {
         // Player landed on Slice 4 (first prize)
