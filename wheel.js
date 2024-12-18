@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // If the prize is already won or the player has already played today, show the tryagain page
   if (prizeWon === 'true' || lastPlayedDate === today) {
-    window.location.href = 'wheel.html';
+    window.location.href = 'tryagain.html';
   }
 
   spinBtn.addEventListener('click', function() {
