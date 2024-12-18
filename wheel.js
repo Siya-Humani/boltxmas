@@ -32,16 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
       const landingDegree = finalDegree % 360;
       const landingSlice = Math.floor(landingDegree / sliceDegrees);
 
-      const prizeSliceIndex1 = 2;  // Slice 4 (first prize) is indexed at 3
+      const prizeSliceIndex1 = 3;  // Slice 4 (first prize) is indexed at 3
       const prizeSliceIndex2 = 6;  // Slice 6 (second prize) is indexed at 5
       
-      if (landingSlice === prizeSliceIndex1) {
+      if (landingSlice === prizeSliceIndex3) {
         // Player landed on Slice 4 (first prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'first'); // Optional: Store which prize was won
         localStorage.setItem('hasPlayed', 'true');
         window.location.href = 'firstcongrats.html';  // Redirect to the first prize congrats page
-      } else if (landingSlice === prizeSliceIndex2) {
+      } else if (landingSlice === prizeSliceIndex5) {
         // Player landed on Slice 6 (second prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'second'); // Optional: Store which prize was won
