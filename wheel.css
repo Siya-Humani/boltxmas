@@ -24,6 +24,9 @@ body {
     justify-content: center;
 }
 
+#wheel {
+  transform-origin: center center;
+}
 .spinner img {
     display: flex;
     margin: 30px 150px 30px;
