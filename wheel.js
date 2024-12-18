@@ -6,15 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
-    const spinDuration = Math.floor(Math.random() * 2000) + 3000; 
+    const spinDuration = Math.floor(Math.random() * 2000) + 3000;
     const randomDegree = Math.floor(Math.random() * 360);
     const finalDegree = randomDegree + (360 * 3);  // 3 full rotations
 
+    // Set the transition for the spin
     wheel.style.transition = `transform ${spinDuration}ms ease-out`;
     wheel.style.transform = `rotate(${finalDegree}deg)`;
 
-    setTimeout(function() {
-      // After the spin ends, calculate which slice landed on
+    // After spin, listen for the end of the transition
+    wheel.addEventListener('transitionend', function() {
+      // Calculate the landing slice
       const landingDegree = finalDegree % 360;
       const landingSlice = Math.floor(landingDegree / sliceDegrees);
 
@@ -26,19 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'first');
         window.location.href = 'firstcongrats.html';
-      
       } else if (landingSlice === prizeSliceIndex2) {
         // Player landed on Slice 6 (second prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'second');
-
         window.location.href = 'secondcongrats.html';
       } else {
         // Player landed on any other slice (no prize)
         localStorage.setItem('prizeWon', 'false');
         window.location.href = 'tryagain.html';
       }
-    }, spinDuration);
+    });
   });
-
+});
 
