@@ -4,6 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const numSlices = 6;  // Number of prize slices
   const sliceDegrees = 360 / numSlices;  // Each slice spans 60 degrees
 
+  // Get current date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];  // Extracts just the date part (YYYY-MM-DD)
+
+  // Load game state from localStorage
+  const prizeWon = localStorage.getItem('prizeWon');
+  const lastPlayedDate = localStorage.getItem('lastPlayedDate');
+
+  // If the prize is already won or the player has already played today, show the tryagain page
+  if (prizeWon === 'true' || lastPlayedDate === today) {
+    window.location.href = 'tryagain.html';
+  }
+
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
     const spinDuration = Math.floor(Math.random() * 2000) + 3000; 
@@ -25,20 +37,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // Player landed on Slice 4 (first prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'first');
-        window.location.href = 'firstcongrats.html';  // Redirect to the first prize congrats page
+        localStorage.setItem('hasPlayed', 'true');
+        localStorage.setItem('lastPlayedDate', today); // Save the current date
+        window.location.href = 'firstcongrats.html';
       } else if (landingSlice === prizeSliceIndex2) {
         // Player landed on Slice 6 (second prize)
         localStorage.setItem('prizeWon', 'true');
         localStorage.setItem('prizeType', 'second');
-        window.location.href = 'secondcongrats.html';  // Redirect to the second prize congrats page
+        localStorage.setItem('hasPlayed', 'true');
+        localStorage.setItem('lastPlayedDate', today); // Save the current date
+        window.location.href = 'secondcongrats.html';
       } else {
         // Player landed on any other slice (no prize)
-        window.location.href = 'tryagain.html';  // Redirect to try again page
+        localStorage.setItem('hasPlayed', 'true');
+        localStorage.setItem('lastPlayedDate', today); // Save the current date
+        window.location.href = 'tryagain.html';
       }
     }, spinDuration);
   });
-});
-
-    }, spinDuration);
-  });
-});
