@@ -4,6 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const numSlices = 6;  // Number of prize slices
   const sliceDegrees = 360 / numSlices;  // Each slice spans 60 degrees
 
+  // Get current date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];  // Extracts just the date part (YYYY-MM-DD)
+
+  // Load game state from localStorage
+  const prizeWon = localStorage.getItem('prizeWon');
+  const lastPlayedDate = localStorage.getItem('lastPlayedDate');
+
+  // If the prize is already won or the player has already played today, show the tryagain page
+  if (prizeWon === 'true' || lastPlayedDate === today) {
+    window.location.href = 'tryagain.html';
+  }
+
   spinBtn.addEventListener('click', function() {
     // Random spin duration between 1500ms and 3000ms
     const spinDuration = Math.floor(Math.random() * 2000) + 3000; 
@@ -43,5 +55,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }, spinDuration);
   });
-});
+
 
