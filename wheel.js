@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('lastPlayedDate', today); // Save the current date
         window.location.href = 'tryagain.html';
       }
+
     }, spinDuration);
   });
 });
