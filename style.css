@@ -20,7 +20,7 @@ body {
 }
 
 #userForm input {
-  width: 80%;
+  width: 70%;
   padding: 6px; /* Reduced padding for smaller form elements */
   margin: 2px 0; /* Reduced margin between form elements */
   box-sizing: border-box;
@@ -164,7 +164,7 @@ form {
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  width: 100%;
+  width: 60%;
   padding: 12px 15px;
   margin-bottom: 15px;
   border-radius: 5px;
