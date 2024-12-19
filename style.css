@@ -20,7 +20,7 @@ body {
 }
 
 #userForm input {
-  width: 70%;
+  width: 60%;
   padding: 6px; /* Reduced padding for smaller form elements */
   margin: 2px 0; /* Reduced margin between form elements */
   box-sizing: border-box;
@@ -189,9 +189,12 @@ button:hover {
 /* Mobile adjustment (for smaller screens) */
 @media (max-width: 600px) {
   #userForm input {
-    width: 60%; /* Increase width on smaller screens */
+    width: 50%; /* Increase width on smaller screens */
     padding: 8px; /* Slightly larger padding on mobile */
   }
+  p {
+    font-size: 14px;
+    line-height: 1.5 rem;
 }
 
 /* Responsive styles for larger screens */
