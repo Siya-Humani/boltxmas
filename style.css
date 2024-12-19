@@ -142,7 +142,7 @@ button {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   color: #ffffff;
   padding-top: 0; /* Reduce space between the image and the paragraph */
@@ -193,7 +193,7 @@ button:hover {
     padding: 8px; /* Slightly larger padding on mobile */
   }
   p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5 rem;
 }
 
