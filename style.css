@@ -197,6 +197,34 @@ button:hover {
     line-height: 1.5 rem;
 }
 
+  @media only screen and (max-width: 600px) {
+  .snow-image, .snow-image-2, .snow-image-3, .snow-image-4 {
+    height: 50px;  /* Reduce the size for mobile screens */
+    width: 50px;
+  }
+
+  /* Adjust positions for mobile screens */
+  .snow-image {
+    top: 20px; /* Move up a little to fit better */
+    left: 15px; /* Slightly reduce left distance */
+  }
+
+  .snow-image-2 {
+    top: 40px; /* Move it a bit lower to fit the screen */
+    right: 15px; /* Slightly reduce right distance */
+  }
+
+  .snow-image-3 {
+    bottom: 60px; /* Adjust the bottom for better visibility */
+    left: 15px; /* Adjust the left for better alignment */
+  }
+
+  .snow-image-4 {
+    bottom: 10px; /* Move it closer to the bottom edge */
+    right: 15px; /* Adjust the right distance */
+  }
+}
+
 /* Responsive styles for larger screens */
 @media (min-width: 1024px) {
   .container {
