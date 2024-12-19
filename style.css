@@ -141,7 +141,7 @@ button {
   margin-bottom: 5px;
 }
 
-p {
+.p {
   font-size: 18px;
   font-weight: 300;
   color: #ffffff;
@@ -192,10 +192,11 @@ button:hover {
     width: 50%; /* Increase width on smaller screens */
     padding: 8px; /* Slightly larger padding on mobile */
   }
-  p {
+  
+  .p {
     font-size: 16px;
     line-height: 1.5 rem;
-}
+  }
 
   @media only screen and (max-width: 600px) {
   .snow-image, .snow-image-2, .snow-image-3, .snow-image-4 {
