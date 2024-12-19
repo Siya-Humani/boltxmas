@@ -141,8 +141,8 @@ button {
   margin-bottom: 5px;
 }
 
-.p {
-  font-size: 18px;
+p {
+  font-size: 20px;
   font-weight: 300;
   color: #ffffff;
   padding-top: 0; /* Reduce space between the image and the paragraph */
@@ -193,8 +193,8 @@ button:hover {
     padding: 8px; /* Slightly larger padding on mobile */
   }
   
-  .p {
-    font-size: 16px;
+  p {
+    font-size: 20px;
     line-height: 1.5 rem;
   }
 
@@ -238,7 +238,7 @@ button:hover {
   }
 
   p {
-    font-size: 18px; /* Adjust paragraph size for tablet */
+    font-size: 20px; /* Adjust paragraph size for tablet */
   }
 
   button {
